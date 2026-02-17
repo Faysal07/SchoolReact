@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Student from './components/Student'
 import StudentForm from './components/StudentForm'
+import ProductList from './components/Product'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,8 @@ function App() {
       <Student name="Faysal" catagory="CSE" />
 
       <p>You click me :  {count} Times</p>
+
+    <ProductList />
     </>
   )
 }
