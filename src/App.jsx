@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,6 +8,7 @@ import StudentForm from './components/StudentForm'
 import ProductList from './components/Product'
 import Home from './pages/Home'
 import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,10 +18,18 @@ function App() {
       {/* <h2>Please Entry Student Information</h2>
       <StudentForm /> */}
 
+      <nav>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/product'>Product</Link>
+        <Link to='/contact'>Contact</Link>
+      </nav>
+
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/product' element={<ProductList />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
       </Routes>
 
 
