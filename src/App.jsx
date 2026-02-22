@@ -18,11 +18,11 @@ function App() {
       {/* <h2>Please Entry Student Information</h2>
       <StudentForm /> */}
 
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/product'>Product</Link>
-        <Link to='/contact'>Contact</Link>
+      <nav className='navbar'>
+        <Link to='/' className='pageLink'>Home</Link>
+        <Link to='/about' className='pageLink'>About</Link>
+        <Link to='/product' className='pageLink'>Product</Link>
+        <Link to='/contact' className='pageLink'>Contact</Link>
       </nav>
 
       <Routes>

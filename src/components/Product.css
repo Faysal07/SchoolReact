@@ -6,5 +6,13 @@
 .product_box {
     border: 5px solid #000000;
     padding: 30px 0px;
-    margin: 5px 0px;
+    margin: 30px 20px;
+    width: 100%;
+    max-width: 370px;
+    display: inline-block;
+}
+
+.product_box img {
+    width: 230px;
+    height: 175px;
 }

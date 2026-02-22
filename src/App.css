@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar {
+  padding: 8px 0px;
+  text-align: center;
+}
+
+.navbar .pageLink {
+  padding: 8px 18px;
+  background-color: blueviolet;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20x;
+  margin-right: 10px;
+  border: 2px solid blueviolet;
+}
+
+.navbar .pageLink:hover {
+  color: blueviolet;
+  background-color: #ffffff;
+  border: 2px solid blueviolet;
+}
