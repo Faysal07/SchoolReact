@@ -9,6 +9,7 @@ import ProductList from './components/Product'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import ProductDetail from './pages/ProductDetail'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,7 +30,11 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/product' element={<ProductList />}></Route>
+        <Route path='/product/:id' element={<ProductDetail />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
+
+        {/* 404 page load here */}
+        <Route path='*' element={<h1>404 Page. Page not Found</h1>}></Route>
       </Routes>
 
 

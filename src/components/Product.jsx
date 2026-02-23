@@ -20,12 +20,11 @@ function ProductList(){
                 <div key={product.id} className='product_box'>
 
                     <img src={product.image} alt="" srcset="" />
-                    <h4>Product Name: {product.ProductName}</h4>
-                    <h5>Product Price: {product.price}</h5>
-                    <h6>Unit: {product.unit}</h6>
-                    <p>Stock: {product.stock}</p>
-                    {product.stock>0 ? (<a href='#'>Buy Now</a>) : (<a href='#'>Buy Next time</a>)}
-                    {product.stock === 0 && (<mark>Stock out </mark>)}
+                    <h4>Product Name: <span>{product.ProductName}</span></h4>
+                    <h5>Product Price: <span>{product.price}</span></h5>
+                    <p>Unit: <span>{product.unit}</span></p>
+                    <p>Stock: <span>{product.stock}</span> {product.stock === 0 && (<mark>Stock out </mark>)}</p>
+                    {product.stock > 0 ? (<a href='#'>Buy Now</a>) : (<a href='#'>Buy Next time</a>)}
                 </div>
 
             )}
