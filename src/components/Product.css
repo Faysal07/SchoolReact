@@ -68,3 +68,9 @@
     display: inline-block;
     border-radius: 4px;
 }
+
+.cart {
+    padding: 8px 15px;
+    background-color: blueviolet;
+    color: #ffffff;
+}

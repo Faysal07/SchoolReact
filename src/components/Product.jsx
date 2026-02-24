@@ -1,6 +1,15 @@
 import './Product.css';
+import { useEffect, useState } from 'react';
+
 
 function ProductList(){
+
+    const [count, setCount] = useState(0);
+    
+    useEffect(() => {
+        document.title = `You Shopping ${count} items`;
+    }, [count]);
+
 
     const products = [
         {id: 1, ProductName : "Apple", price: 250, unit: "1kg", stock: 50, image: "https://i.postimg.cc/3x02mc25/apple-photo.jpg"},
@@ -15,6 +24,8 @@ function ProductList(){
         <div>
             <h1 className="product_title">Product List Here</h1>
 
+            <h5>Shoping {count} </h5>
+
             {products.map(product =>
 
                 <div key={product.id} className='product_box'>
@@ -24,7 +35,7 @@ function ProductList(){
                     <h5>Product Price: <span>{product.price}</span></h5>
                     <p>Unit: <span>{product.unit}</span></p>
                     <p>Stock: <span>{product.stock}</span> {product.stock === 0 && (<mark>Stock out </mark>)}</p>
-                    {product.stock > 0 ? (<a href='#'>Buy Now</a>) : (<a href='#'>Buy Next time</a>)}
+                    {product.stock > 0 ? (<a href='#' onClick={setCount(count+1)}>Buy Now</a>) : (<a href='#'>Buy Next time</a>)}
                 </div>
 
             )}
