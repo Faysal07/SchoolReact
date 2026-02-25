@@ -24,18 +24,18 @@ function ProductList(){
         <div>
             <h1 className="product_title">Product List Here</h1>
 
-            <h5>Shoping {count} </h5>
+            {count === 0 ? (<h5 className='not_shoping'>opps! you don't buy anythings.</h5>) : (<h5 className='shoping'>Congratulations! You buy {count} items</h5>)}
 
             {products.map(product =>
 
                 <div key={product.id} className='product_box'>
 
-                    <img src={product.image} alt="" srcset="" />
+                    <img src={product.image} alt={product.ProductName} />
                     <h4>Product Name: <span>{product.ProductName}</span></h4>
                     <h5>Product Price: <span>{product.price}</span></h5>
                     <p>Unit: <span>{product.unit}</span></p>
                     <p>Stock: <span>{product.stock}</span> {product.stock === 0 && (<mark>Stock out </mark>)}</p>
-                    {product.stock > 0 ? (<a href='#' onClick={setCount(count+1)}>Buy Now</a>) : (<a href='#'>Buy Next time</a>)}
+                    {product.stock > 0 ? (<a href='#' onClick={() => setCount(count+1)}>Buy Now</a>) : (<a href='#'>Buy Next time</a>)}
                 </div>
 
             )}
