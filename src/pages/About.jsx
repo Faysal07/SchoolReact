@@ -1,6 +1,10 @@
+import User from "../components/User";
+
 function About(){
     return (
-        <h1>About Page Load</h1>
+        <div>
+            <User />
+        </div>
     )
 }
 
