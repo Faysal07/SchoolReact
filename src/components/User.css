@@ -1,0 +1,18 @@
+.user_box {
+    padding: 20px;
+    border: 2px solid #363636;
+    margin: 5px;
+    width: 100%;
+    max-width: 370px;
+    display: inline-block;
+}
+
+.user_box h3,
+.user_box h5 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 4px 20px;
+    margin: 0px;
+}
